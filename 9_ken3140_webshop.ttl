@@ -1,0 +1,1054 @@
+@prefix ex: <http://example.org/webshop#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Brand a rdfs:Class .
+
+ex:Category a rdfs:Class .
+
+ex:Combo a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:Keyboard a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:Mouse a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:Product a rdfs:Class .
+
+ex:Speaker a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:TabletAccessory a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:VideoConferencing a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:Webcam a rdfs:Class ;
+    rdfs:subClassOf ex:Product .
+
+ex:hasBrand a rdf:Property .
+
+ex:inCategory a rdf:Property .
+
+ex:prod001 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "ERGO M575 Wireless Trackball for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "ERGO M575 Wireless Trackball for Business - ERGO M575 Wireless Trackball for Business - Graphite" ;
+    schema1:price 4999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.2 ;
+    schema1:sku "910-006197" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/ergo-m575-for-business.html> .
+
+ex:prod002 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "MX MASTER 3S FOR BUSINESS" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "MX MASTER 3S FOR BUSINESS - MX MASTER 3S FOR BUSINESS - Graphite" ;
+    schema1:price 10999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "910-006581" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/mx-master-3s-business-wireless-mouse.html> .
+
+ex:prod003 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "MX Anywhere 3S" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Black" ;
+    schema1:model "MX Anywhere 3S - MX Anywhere 3S - Black" ;
+    schema1:price 8999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "910-006928" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s-wireless-mouse.html> .
+
+ex:prod004 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "MX Anywhere 3S" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Rose" ;
+    schema1:model "MX Anywhere 3S - Rose" ;
+    schema1:price 7999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "910-006927" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s.html> .
+
+ex:prod005 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "MX ANYWHERE 3S FOR BUSINESS" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "MX ANYWHERE 3S FOR BUSINESS - MX ANYWHERE 3S FOR BUSINESS - Graphite" ;
+    schema1:price 9999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "910-006956" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s-business.html> .
+
+ex:prod007 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "Pebble Mouse 2 M350s" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Tonal Graphite" ;
+    schema1:model "Pebble Mouse 2 M350s - Tonal Graphite" ;
+    schema1:price 1999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "910-007024" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/pebble-2-m350s-wireless-mouse.html> .
+
+ex:prod008 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "M240 for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "M240 for Business - M240 for Business - Graphite" ;
+    schema1:price 2499.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.8 ;
+    schema1:sku "910-007181" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/m240-wireless-mouse-business.html> .
+
+ex:prod009 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "M340 Collection" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Speckles" ;
+    schema1:model "M340 Collection - Speckles" ;
+    schema1:price 1799.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "910-007281" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/m340-wireless-mouse-collection.html> .
+
+ex:prod010 a ex:Mouse,
+        ex:Product ;
+    rdfs:label """Signature AI Edition 
+M750 Wireless mouse""" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model """Signature AI Edition 
+M750 Wireless mouse - Graphite""" ;
+    schema1:price 4999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "910-007396" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/signature-ai-edition-m750-wireless-mouse.html> .
+
+ex:prod011 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "MX Anywhere 3S for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Pale Grey" ;
+    schema1:model "MX Anywhere 3S for Mac - Pale Grey" ;
+    schema1:price 7999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "910-006944" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s-for-mac.html> .
+
+ex:prod012 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "MX Ergo S" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Ergo S - Graphite" ;
+    schema1:price 10999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "910-007259" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/mx-ergo-s-wireless-trackball-mouse.html> .
+
+ex:prod013 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "ERGO M575S" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Black + Silver Ball" ;
+    schema1:model "ERGO M575S - Black + Silver Ball" ;
+    schema1:price 4499.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.6 ;
+    schema1:sku "910-007392" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/ergo-m575s-wireless-trackball.html> .
+
+ex:prod014 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "Logi USB Type-C to USB Type-C Cable" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "Logi USB Type-C to USB Type-C Cable - Graphite" ;
+    schema1:price 999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.8 ;
+    schema1:sku "956-000152" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/usb-c-c-cable.html> .
+
+ex:prod015 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "Logi USB-A to USB-C Adaptor" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "Logi USB-A to USB-C Adaptor - Logi USB-A to USB-C Adaptor - Graphite" ;
+    schema1:price 1499.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.8 ;
+    schema1:sku "956-000168" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/usb-a-c-adapter.html> .
+
+ex:prod016 a ex:Mouse,
+        ex:Product ;
+    rdfs:label "Signature Wired M520 L for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ComputerMice ;
+    schema1:color "Graphite" ;
+    schema1:model "Signature Wired M520 L for Business - Signature Wired M520 L for Business - Graphite" ;
+    schema1:price 2499.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.8 ;
+    schema1:sku "910-007497" ;
+    schema1:url <https://www.logitech.com/en-us/products/mice/m520-business.html> .
+
+ex:prod017 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Keys for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Keys for Business - MX Keys for Business - Graphite - English" ;
+    schema1:price 12999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.1 ;
+    schema1:sku "920-010116" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-for-business.html> .
+
+ex:prod018 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Keys Mini for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Keys Mini for Business - MX Keys Mini for Business - Graphite - English" ;
+    schema1:price 10999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.5 ;
+    schema1:sku "920-010594" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-mini-for-business.html> .
+
+ex:prod019 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Keys Mini for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Space Gray" ;
+    schema1:model "MX Keys Mini for Mac - Space Gray - English" ;
+    schema1:price 9999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "920-012644" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-mini-for-mac.html> .
+
+ex:prod020 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Keys S" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Black" ;
+    schema1:model "MX Keys S - MX Keys S - Black - English" ;
+    schema1:price 11999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.1 ;
+    schema1:sku "920-011406" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-s-wireless-keyboard.html> .
+
+ex:prod022 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "Pebble Keys 2 K380s" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Tonal Rose" ;
+    schema1:model "Pebble Keys 2 K380s - Tonal Rose - English" ;
+    schema1:price 3399.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "920-011777" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/pebble-keys-2.html> .
+
+ex:prod023 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "Wave Keys" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Off-white" ;
+    schema1:model "Wave Keys - Off-white - English" ;
+    schema1:price 6099.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "920-012275" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/wave-keys-ergonomic-wireless.html> .
+
+ex:prod024 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "WAVE KEYS FOR BUSINESS" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Graphite" ;
+    schema1:model "WAVE KEYS FOR BUSINESS - WAVE KEYS FOR BUSINESS - Graphite - English" ;
+    schema1:price 6999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.0 ;
+    schema1:sku "920-012058" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/wave-keys-business-ergonomic-wireless.html> .
+
+ex:prod025 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Mechanical Mini" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Mechanical Mini - Graphite - English" ;
+    schema1:price 15999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.9 ;
+    schema1:sku "920-010550" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-mechanical-mini.html> .
+
+ex:prod026 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Keyboard Sleeve" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Grey Black" ;
+    schema1:model "MX Keyboard Sleeve - Grey Black" ;
+    schema1:price 2999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.1 ;
+    schema1:sku "956-000126" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keyboard-sleeve.html> .
+
+ex:prod027 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "Signature Slim Keyboard K950" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Off-white" ;
+    schema1:model "Signature Slim Keyboard K950 - Off-white - English" ;
+    schema1:price 7999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.1 ;
+    schema1:sku "920-012429" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/signature-slim-k950-keyboard.html> .
+
+ex:prod028 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "Wave Keys for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Off-white" ;
+    schema1:model "Wave Keys for Mac - Off-white - English" ;
+    schema1:price 6099.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.3 ;
+    schema1:sku "920-012402" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/wave-keys-mac.html> .
+
+ex:prod029 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Keys S for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Space Gray" ;
+    schema1:model "MX Keys S for Mac - Space Gray - English" ;
+    schema1:price 11999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "920-011621" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-s-for-mac.html> .
+
+ex:prod030 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "MX Creative Console" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Pale Grey" ;
+    schema1:model "MX Creative Console - Pale Grey" ;
+    schema1:price 16999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.3 ;
+    schema1:sku "920-012661" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/buy-mx-creative-console.html> .
+
+ex:prod031 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "POP Icon Keys" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Lilac & Off White" ;
+    schema1:model "POP Icon Keys - Lilac & Off White - English" ;
+    schema1:price 4999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.8 ;
+    schema1:sku "920-013050" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/pop-icon-keys.html> .
+
+ex:prod032 a ex:Keyboard,
+        ex:Product ;
+    rdfs:label "Signature Slim Wired K620 for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Keyboards ;
+    schema1:color "Graphite" ;
+    schema1:model "Signature Slim Wired K620 for Business - Signature Slim Wired K620 for Business - Graphite - English" ;
+    schema1:price 4999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.2 ;
+    schema1:sku "920-013302" ;
+    schema1:url <https://www.logitech.com/en-us/products/keyboards/k620-business.html> .
+
+ex:prod033 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Signature Slim Combo MK955" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "Signature Slim Combo MK955 - Graphite - English" ;
+    schema1:price 11999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "920-012425" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/signature-slim-mk955.html> .
+
+ex:prod034 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MX KEYS COMBO FOR BUSINESS | Gen 2" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "MX KEYS COMBO FOR BUSINESS | Gen 2 - MX KEYS COMBO FOR BUSINESS | Gen 2 - Graphite - English" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.5 ;
+    schema1:sku "920-010923" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-combo-business-gen-2.html> .
+
+ex:prod035 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MX Keys S Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Keys S Combo - MX Keys S Combo - Graphite - English" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.9 ;
+    schema1:sku "920-011889" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-s-keyboard-mouse-combo.html> .
+
+ex:prod036 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MX Keys S Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Black" ;
+    schema1:model "MX Keys S Combo - Black - English" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "920-012274" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-s-combo.html> .
+
+ex:prod037 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MK370 Combo for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "MK370 Combo for Business - MK370 Combo for Business - Graphite - English" ;
+    schema1:price 3999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.9 ;
+    schema1:sku "920-011887" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mk370-keyboard-mouse.html> .
+
+ex:prod038 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Casa Pop-Up Desk" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Classic Chic" ;
+    schema1:model "Casa Pop-Up Desk - Classic Chic - English" ;
+    schema1:price 17999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 5.0 ;
+    schema1:sku "920-011236" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/casa-pop-up-desk.html> .
+
+ex:prod039 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Pebble 2 Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Tonal Rose" ;
+    schema1:model "Pebble 2 Combo - Tonal Rose - English" ;
+    schema1:price 5999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "920-012199" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/pebble-2-keyboard-mouse-combo.html> .
+
+ex:prod040 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Pebble 2 Combo for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Tonal White" ;
+    schema1:model "Pebble 2 Combo for Mac - Tonal White - English" ;
+    schema1:price 5999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.0 ;
+    schema1:sku "920-012201" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/pebble-2-combo-for-mac.html> .
+
+ex:prod041 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Wave Keys MK670 Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "Wave Keys MK670 Combo - Graphite - English" ;
+    schema1:price 8999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.9 ;
+    schema1:sku "920-012059" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mk670-wave-keys-mouse.html> .
+
+ex:prod042 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MX Mechanical Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Mechanical Combo - Graphite" ;
+    schema1:price 24498.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "mx3-mcombo" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mx-mechanical-master-3s.html> .
+
+ex:prod043 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Productivity Value Solution" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Black" ;
+    schema1:model "Productivity Value Solution - Black" ;
+    schema1:price 6999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.3 ;
+    schema1:sku "pws-amrvalue" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/productivity-value-solution.html> .
+
+ex:prod044 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Productivity Style Bundle" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Black" ;
+    schema1:model "Productivity Style Bundle - Black" ;
+    schema1:price 99.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "pws-amrstyle" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/productivity-style-bundle.html> .
+
+ex:prod045 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Productivity Bundle" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Black" ;
+    schema1:model "Productivity Bundle - Black" ;
+    schema1:price 15999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "pws-amreff" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/productivity-bundle.html> .
+
+ex:prod046 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Ultimate Productivity Bundle" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Black" ;
+    schema1:model "Ultimate Productivity Bundle - Black" ;
+    schema1:price 34999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.6 ;
+    schema1:sku "pws-amrulti" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/ultimate-productivity-bundle.html> .
+
+ex:prod047 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Signature Slim Combo MK955 for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "Signature Slim Combo MK955 for Business - Signature Slim Combo MK955 for Business - Graphite - English" ;
+    schema1:price 11999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "920-012427" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/signature-slim-mk955-business.html> .
+
+ex:prod048 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MX Mechanical Mini for Mac Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Pale Gray" ;
+    schema1:model "MX Mechanical Mini for Mac Combo - Pale Gray - English" ;
+    schema1:price 21999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.6 ;
+    schema1:sku "mac-mmini3s" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mx-mechanical-mini-master-3s-mac.html> .
+
+ex:prod049 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Wave Keys for Mac + Lift for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Off-white" ;
+    schema1:model "Wave Keys for Mac + Lift for Mac - Off-white - English" ;
+    schema1:price 11499.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "mac-wklift" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/wave-keys-lift-mac.html> .
+
+ex:prod050 a ex:Combo,
+        ex:Product ;
+    rdfs:label "MX Keys S Combo for Mac" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Space Gray" ;
+    schema1:model "MX Keys S Combo for Mac - Space Gray - English" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "920-012592" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-s-combo-for-mac.html> .
+
+ex:prod051 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Signature Slim Combo MK955 for Business | Copilot Edition" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "Signature Slim Combo MK955 for Business | Copilot Edition - Signature Slim Combo MK955 for Business | Copilot Edition - Graphite - English" ;
+    schema1:price 7999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "920-013271" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/signature-slim-mk955-for-business-copilot-edition.html> .
+
+ex:prod052 a ex:Combo,
+        ex:Product ;
+    rdfs:label "POP Icon Combo" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Rose & Off White" ;
+    schema1:model "POP Icon Combo - Rose & Off White - English" ;
+    schema1:price 6999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "920-013105" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/pop-icon-combo.html> .
+
+ex:prod053 a ex:Combo,
+        ex:Product ;
+    rdfs:label "Signature Slim Wired Combo MK625 for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:KeyboardMouseCombos ;
+    schema1:color "Graphite" ;
+    schema1:model "Signature Slim Wired Combo MK625 for Business - Signature Slim Wired Combo MK625 for Business - Graphite - English" ;
+    schema1:price 6999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.4 ;
+    schema1:sku "920-013303" ;
+    schema1:url <https://www.logitech.com/en-us/products/combos/mk625-business.html> .
+
+ex:prod054 a ex:Product,
+        ex:TabletAccessory ;
+    rdfs:label "Combo Touch for iPad Air" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:iPadAccessories ;
+    schema1:color "Oxford Grey" ;
+    schema1:model "Combo Touch for iPad Air - Oxford Grey - English" ;
+    schema1:price 22999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.1 ;
+    schema1:sku "920-012608" ;
+    schema1:url <https://www.logitech.com/en-us/products/ipad-keyboards/combo-touch-ipad-air.html> .
+
+ex:prod055 a ex:Product,
+        ex:TabletAccessory ;
+    rdfs:label "Combo Touch for iPad Pro" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:iPadAccessories ;
+    schema1:color "Graphite" ;
+    schema1:model "Combo Touch for iPad Pro - Graphite - English" ;
+    schema1:price 25999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "920-012658" ;
+    schema1:url <https://www.logitech.com/en-us/products/ipad-keyboards/combo-touch-ipad-pro.html> .
+
+ex:prod056 a ex:Product,
+        ex:TabletAccessory ;
+    rdfs:label "CRAYON (USB-C) TIP COVER" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:iPadAccessories ;
+    schema1:color "Silver" ;
+    schema1:model "CRAYON (USB-C) TIP COVER - Silver" ;
+    schema1:price 499.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "951-000051" ;
+    schema1:url <https://www.logitech.com/en-us/products/ipad-accessories/crayon-replacement-tip-usb-c.html> .
+
+ex:prod057 a ex:Product,
+        ex:TabletAccessory ;
+    rdfs:label "Keys-To-Go 2" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:TabletAccessories ;
+    schema1:color "Pale Gray" ;
+    schema1:model "Keys-To-Go 2 - Pale Gray - English" ;
+    schema1:price 7999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.3 ;
+    schema1:sku "920-012919" ;
+    schema1:url <https://www.logitech.com/en-us/products/tablet-keyboards/keys-to-go2-universal.html> .
+
+ex:prod058 a ex:Product,
+        ex:TabletAccessory ;
+    rdfs:label "Keys-To-Go 2 for iPad" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:TabletAccessories ;
+    schema1:color "Pale Gray" ;
+    schema1:model "Keys-To-Go 2 for iPad - Pale Gray - English" ;
+    schema1:price 7999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.6 ;
+    schema1:sku "920-012922" ;
+    schema1:url <https://www.logitech.com/en-us/products/tablet-keyboards/keys-to-go2-apple.html> .
+
+ex:prod059 a ex:Product,
+        ex:Speaker ;
+    rdfs:label "BOOM 3" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Speakers ;
+    schema1:color "Sunset red" ;
+    schema1:model "BOOM 3 - BOOM 3 - Sunset red" ;
+    schema1:price 14999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.4 ;
+    schema1:sku "984-001352" ;
+    schema1:url <https://www.logitech.com/en-us/products/speakers/bluetooth-speakers/boom-3.html> .
+
+ex:prod060 a ex:Product,
+        ex:Speaker ;
+    rdfs:label "MEGABOOM 3" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Speakers ;
+    schema1:color "Sunset red" ;
+    schema1:model "MEGABOOM 3 - MEGABOOM 3 - Sunset red" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.9 ;
+    schema1:sku "984-001394" ;
+    schema1:url <https://www.logitech.com/en-us/products/speakers/bluetooth-speakers/megaboom-3.html> .
+
+ex:prod061 a ex:Product,
+        ex:Speaker ;
+    rdfs:label "HYPERBOOM RENEWED" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Speakers ;
+    schema1:color "Black" ;
+    schema1:model "HYPERBOOM RENEWED - HYPERBOOM RENEWED - Black" ;
+    schema1:price 27999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "996-000364" ;
+    schema1:url <https://www.logitech.com/en-us/products/speakers/bluetooth-speakers/hyperboom-renewed.html> .
+
+ex:prod062 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "BRIO 100" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "BRIO 100 - Graphite" ;
+    schema1:price 2999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "960-001580" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/brio-100-b.html> .
+
+ex:prod063 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "Brio" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Black" ;
+    schema1:model "Brio - Brio - Black" ;
+    schema1:price 16999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "960-001105" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/brio-4k-hdr-webcam.html> .
+
+ex:prod064 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "StreamCam" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "StreamCam - Graphite" ;
+    schema1:price 16999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.9 ;
+    schema1:sku "960-001286" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/streamcam.html> .
+
+ex:prod065 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "Brio 300" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "Brio 300 - Graphite" ;
+    schema1:price 5999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.4 ;
+    schema1:sku "960-001497" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/brio-300-webcam.html> .
+
+ex:prod066 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "BRIO 305" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "BRIO 305 - BRIO 305 - Graphite" ;
+    schema1:price 5999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.4 ;
+    schema1:sku "960-001414" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/brio-305-webcam.html> .
+
+ex:prod067 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "Brio 105" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "Brio 105 - Brio 105 - Graphite" ;
+    schema1:price 3999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.9 ;
+    schema1:sku "960-001579" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/brio-105-business-webcam.html> .
+
+ex:prod069 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "MX Brio 705 for Business" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Brio 705 for Business - MX Brio 705 for Business - Graphite" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.5 ;
+    schema1:sku "960-001529" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/mx-brio-705-for-business.html> .
+
+ex:prod070 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "MX Brio" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "MX Brio - Graphite" ;
+    schema1:price 19999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.5 ;
+    schema1:sku "960-001545" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/mx-brio-4k-webcam.html> .
+
+ex:prod071 a ex:Product,
+        ex:Webcam ;
+    rdfs:label "Logitech Reach" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:Webcams ;
+    schema1:color "Graphite" ;
+    schema1:model "Logitech Reach" ;
+    schema1:price 34999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "960-001670" ;
+    schema1:url <https://www.logitech.com/en-us/products/webcams/reach-overhead-content-camera.html> .
+
+ex:prod072 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "MeetUp 2" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "Graphite" ;
+    schema1:model "MeetUp 2 - MeetUp 2 - Graphite" ;
+    schema1:price 899.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.3 ;
+    schema1:sku "960-001691" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/conference-cameras/meetup2-conferencecam.html> .
+
+ex:prod073 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "Rally Bar Huddle" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "Graphite" ;
+    schema1:model "Rally Bar Huddle - Rally Bar Huddle - Graphite" ;
+    schema1:price 1899.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.9 ;
+    schema1:sku "960-001485" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rallybarhuddle.html> .
+
+ex:prod074 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "LOGI DOCK FLEX" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "White" ;
+    schema1:model "LOGI DOCK FLEX - LOGI DOCK FLEX - White" ;
+    schema1:price 699.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "939-002154" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/logi-dock-flex-managed.html> .
+
+ex:prod076 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "Rally Bar" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "TAA Compliant" ;
+    schema1:model "Rally Bar - Rally Bar - TAA Compliant" ;
+    schema1:price 4199.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.6 ;
+    schema1:sku "960-001564" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rallybar.html> .
+
+ex:prod077 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "Rally Bar Mini" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "White" ;
+    schema1:model "Rally Bar Mini - Rally Bar Mini - White" ;
+    schema1:price 3299.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 3.7 ;
+    schema1:sku "960-001348" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rallybarmini.html> .
+
+ex:prod078 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "Rally Plus" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "Graphite" ;
+    schema1:model "Rally Plus - Rally Plus" ;
+    schema1:price 2799.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.0 ;
+    schema1:sku "960-001225" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html> .
+
+ex:prod079 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "Logitech Rally Camera Streamline Kit" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "Graphite" ;
+    schema1:model "Logitech Rally Camera Streamline Kit - Logitech Rally Camera Streamline Kit - Graphite" ;
+    schema1:price 2199.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.1 ;
+    schema1:sku "991-000553" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-streamline-kit.html> .
+
+ex:prod080 a ex:Product,
+        ex:VideoConferencing ;
+    rdfs:label "Rally Board 65" ;
+    ex:hasBrand ex:Logitech ;
+    ex:inCategory ex:ConferenceCameras ;
+    schema1:color "Graphite" ;
+    schema1:model "Rally Board 65 - Rally Board 65 - Graphite" ;
+    schema1:price 6999.0 ;
+    schema1:priceCurrency "USD" ;
+    schema1:ratingValue 4.7 ;
+    schema1:sku "960-001697" ;
+    schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-board-65.html> .
+
+ex:TabletAccessories a ex:Category ;
+    rdfs:label "TabletAccessories" .
+
+ex:Speakers a ex:Category ;
+    rdfs:label "Speakers" .
+
+ex:iPadAccessories a ex:Category ;
+    rdfs:label "iPadAccessories" .
+
+ex:ConferenceCameras a ex:Category ;
+    rdfs:label "ConferenceCameras" .
+
+ex:Webcams a ex:Category ;
+    rdfs:label "Webcams" .
+
+ex:ComputerMice a ex:Category ;
+    rdfs:label "ComputerMice" .
+
+ex:Keyboards a ex:Category ;
+    rdfs:label "Keyboards" .
+
+ex:KeyboardMouseCombos a ex:Category ;
+    rdfs:label "KeyboardMouseCombos" .
+
+ex:Logitech a ex:Brand ;
+    rdfs:label "Logitech" .
+

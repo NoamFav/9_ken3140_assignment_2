@@ -1,0 +1,213 @@
+Query A
+=======
+
+PREFIX ex: <http://example.org/webshop#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# A) For a given item, provide all its categories/subcategories and its brand.
+SELECT ?itemLabel ?brandName ?categoryLabel WHERE {
+  VALUES ?item { ex:prod001 }
+  ?item rdfs:label ?itemLabel ;
+        ex:hasBrand ?brand ;
+        ex:inCategory ?category .
+  ?brand rdfs:label ?brandName .
+  ?category rdfs:label ?categoryLabel .
+}
+
+
+RESULTS:
+ERGO M575 Wireless Trackball for Business | Logitech | ComputerMice
+
+
+Query B
+=======
+
+PREFIX ex: <http://example.org/webshop#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# B) Items from different subcategories that share the same brand.
+SELECT ?brandName ?item1Label ?category1Label ?item2Label ?category2Label WHERE {
+  ?item1 ex:hasBrand ?brand ; 
+         ex:inCategory ?category1 ; 
+         rdfs:label ?item1Label .
+  ?item2 ex:hasBrand ?brand ; 
+         ex:inCategory ?category2 ; 
+         rdfs:label ?item2Label .
+  ?brand rdfs:label ?brandName .
+  ?category1 rdfs:label ?category1Label .
+  ?category2 rdfs:label ?category2Label .
+  FILTER(?item1 != ?item2 && ?category1 != ?category2)
+}
+ORDER BY ?brandName ?item1Label ?item2Label
+LIMIT 10
+
+
+RESULTS:
+Logitech | BOOM 3 | Speakers | BRIO 100 | Webcams
+Logitech | BOOM 3 | Speakers | BRIO 305 | Webcams
+Logitech | BOOM 3 | Speakers | Brio | Webcams
+Logitech | BOOM 3 | Speakers | Brio 105 | Webcams
+Logitech | BOOM 3 | Speakers | Brio 300 | Webcams
+Logitech | BOOM 3 | Speakers | CRAYON (USB-C) TIP COVER | iPadAccessories
+Logitech | BOOM 3 | Speakers | Casa Pop-Up Desk | KeyboardMouseCombos
+Logitech | BOOM 3 | Speakers | Combo Touch for iPad Air | iPadAccessories
+Logitech | BOOM 3 | Speakers | Combo Touch for iPad Pro | iPadAccessories
+Logitech | BOOM 3 | Speakers | ERGO M575 Wireless Trackball for Business | ComputerMice
+
+
+Query C
+=======
+
+PREFIX ex: <http://example.org/webshop#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# C) Group products by brand and show average price and rating
+SELECT ?brandName 
+       (AVG(xsd:decimal(?price)) AS ?avgPrice) 
+       (AVG(xsd:decimal(?rating)) AS ?avgRating)
+       (COUNT(?item) AS ?itemCount) WHERE {
+  ?item ex:hasBrand ?brand ; 
+        schema:price ?price ;
+        schema:ratingValue ?rating .
+  ?brand rdfs:label ?brandName .
+}
+GROUP BY ?brandName
+ORDER BY DESC(?avgPrice)
+
+
+RESULTS:
+Logitech | 10288.46052631578947368421053 | 4.182894736842105263157894737 | 76
+
+
+Query D
+=======
+
+PREFIX ex: <http://example.org/webshop#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# D) Sort products in mice category by average brand price
+SELECT ?brandName 
+       (AVG(xsd:decimal(?price)) AS ?avgBrandPrice) 
+       (AVG(xsd:decimal(?rating)) AS ?avgBrandRating)
+       (COUNT(?item) AS ?itemsInCategory) WHERE {
+  ?item a ex:Product ; 
+        ex:inCategory ex:ComputerMice ; 
+        ex:hasBrand ?brand ; 
+        schema:price ?price ;
+        schema:ratingValue ?rating .
+  ?brand rdfs:label ?brandName .
+}
+GROUP BY ?brandName
+ORDER BY DESC(?avgBrandPrice)
+
+
+RESULTS:
+Logitech | 5519.0 | 4.173333333333333333333333333 | 15
+
+
+Query F
+=======
+
+PREFIX ex: <http://example.org/webshop#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# F) Recommend similar items based on shared brand and/or category
+SELECT ?candidateLabel ?sharedAttributes WHERE {
+  VALUES ?seedItem { ex:prod001 }
+  
+  ?seedItem ex:hasBrand ?seedBrand ;
+            ex:inCategory ?seedCategory .
+  
+  ?candidate rdfs:label ?candidateLabel ;
+             ex:hasBrand ?seedBrand ;
+             ex:inCategory ?candidateCategory .
+  
+  BIND(
+    CONCAT(
+      IF(?seedBrand = ?seedBrand, "SameBrand ", ""),
+      IF(?seedCategory = ?candidateCategory, "SameCategory", "DifferentCategory")
+    ) AS ?sharedAttributes
+  )
+  
+  FILTER(?candidate != ?seedItem)
+}
+ORDER BY ?sharedAttributes ?candidateLabel
+LIMIT 10
+
+
+RESULTS:
+BOOM 3 | SameBrand DifferentCategory
+BRIO 100 | SameBrand DifferentCategory
+BRIO 305 | SameBrand DifferentCategory
+Brio | SameBrand DifferentCategory
+Brio 105 | SameBrand DifferentCategory
+Brio 300 | SameBrand DifferentCategory
+CRAYON (USB-C) TIP COVER | SameBrand DifferentCategory
+Casa Pop-Up Desk | SameBrand DifferentCategory
+Combo Touch for iPad Air | SameBrand DifferentCategory
+Combo Touch for iPad Pro | SameBrand DifferentCategory
+
+
+Query G
+=======
+
+PREFIX ex: <http://example.org/webshop#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# G) Custom question: "Find mice products under $100 with rating above 4.0"
+SELECT ?itemLabel ?price ?rating ?color WHERE {
+  ?item a ex:Product ;
+        ex:inCategory ex:ComputerMice ;
+        schema:price ?price ;
+        schema:ratingValue ?rating ;
+        schema:color ?color ;
+        rdfs:label ?itemLabel .
+  
+  FILTER(xsd:decimal(?price) < 100.0 && xsd:decimal(?rating) > 4.0)
+}
+ORDER BY ASC(xsd:decimal(?price))
+
+
+RESULTS:
+(no results)
+
+
+Query E (for Wikidata)
+====================
+
+# E) External SERVICE (Wikidata)
+# Copy this query to https://query.wikidata.org/ and run it
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?property ?propertyLabel ?value ?valueLabel WHERE {
+  BIND("Logitech"@en AS ?brandLabel)
+  ?brand wdt:P31/wdt:P279* wd:Q4830453 ;
+         rdfs:label ?brandLabel .
+  
+  VALUES ?prop { 
+    wdt:P159   # headquarters location
+    wdt:P571   # inception date  
+    wdt:P112   # founder
+    wdt:P154   # logo image
+    wdt:P856   # official website
+  }
+  
+  ?brand ?prop ?value .
+  ?prop rdfs:label ?property .
+  
+  OPTIONAL { ?value rdfs:label ?valueLabel }
+  
+  FILTER(LANG(?brandLabel) = "en")
+  FILTER(LANG(?property) = "en") 
+  FILTER(!BOUND(?valueLabel) || LANG(?valueLabel) = "en")
+}
+ORDER BY ?property
+
+
