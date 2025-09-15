@@ -45,7 +45,7 @@ ex:prod001 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 49.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.7 ;
+    schema1:ratingValue 4.1 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/ergo-m575-for-business.html> .
 
 ex:prod002 a ex:Mouse,
@@ -58,7 +58,7 @@ ex:prod002 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 109.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.3 ;
+    schema1:ratingValue 4.2 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/mx-master-3s-business-wireless-mouse.html> .
 
 ex:prod003 a ex:Mouse,
@@ -71,7 +71,7 @@ ex:prod003 a ex:Mouse,
     schema1:color "Black" ;
     schema1:price 89.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 3.8 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s-wireless-mouse.html> .
 
 ex:prod004 a ex:Mouse,
@@ -84,7 +84,7 @@ ex:prod004 a ex:Mouse,
     schema1:color "Rose" ;
     schema1:price 79.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.4 ;
+    schema1:ratingValue 4.6 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s.html> .
 
 ex:prod005 a ex:Mouse,
@@ -97,7 +97,7 @@ ex:prod005 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 99.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.9 ;
+    schema1:ratingValue 3.6 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/mx-anywhere-3s-business.html> .
 
 ex:prod007 a ex:Mouse,
@@ -110,7 +110,7 @@ ex:prod007 a ex:Mouse,
     schema1:color "Tonal Graphite" ;
     schema1:price 19.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.3 ;
+    schema1:ratingValue 4.7 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/pebble-2-m350s-wireless-mouse.html> .
 
 ex:prod008 a ex:Mouse,
@@ -136,7 +136,7 @@ ex:prod009 a ex:Mouse,
     schema1:color "Speckles" ;
     schema1:price 17.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/m340-wireless-mouse-collection.html> .
 
 ex:prod010 a ex:Mouse,
@@ -149,7 +149,7 @@ ex:prod010 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 49.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.8 ;
+    schema1:ratingValue 4.5 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/signature-ai-edition-m750-wireless-mouse.html> .
 
 ex:prod011 a ex:Mouse,
@@ -175,7 +175,7 @@ ex:prod012 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 109.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.8 ;
+    schema1:ratingValue 4.6 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/mx-ergo-s-wireless-trackball-mouse.html> .
 
 ex:prod013 a ex:Mouse,
@@ -188,7 +188,7 @@ ex:prod013 a ex:Mouse,
     schema1:color "Black + Silver Ball" ;
     schema1:price 44.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.9 ;
+    schema1:ratingValue 4.6 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/ergo-m575s-wireless-trackball.html> .
 
 ex:prod014 a ex:Mouse,
@@ -201,7 +201,7 @@ ex:prod014 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 9.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.8 ;
+    schema1:ratingValue 3.5 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/usb-c-c-cable.html> .
 
 ex:prod015 a ex:Mouse,
@@ -214,7 +214,7 @@ ex:prod015 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 14.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.2 ;
+    schema1:ratingValue 3.5 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/usb-a-c-adapter.html> .
 
 ex:prod016 a ex:Mouse,
@@ -227,7 +227,7 @@ ex:prod016 a ex:Mouse,
     schema1:color "Graphite" ;
     schema1:price 24.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.0 ;
+    schema1:ratingValue 4.1 ;
     schema1:url <https://www.logitech.com/en-us/products/mice/m520-business.html> .
 
 ex:prod017 a ex:Keyboard,
@@ -240,7 +240,7 @@ ex:prod017 a ex:Keyboard,
     schema1:color "Graphite" ;
     schema1:price 129.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 3.7 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-for-business.html> .
 
 ex:prod018 a ex:Keyboard,
@@ -253,7 +253,7 @@ ex:prod018 a ex:Keyboard,
     schema1:color "Graphite" ;
     schema1:price 109.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.2 ;
+    schema1:ratingValue 4.5 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-mini-for-business.html> .
 
 ex:prod019 a ex:Keyboard,
@@ -266,7 +266,7 @@ ex:prod019 a ex:Keyboard,
     schema1:color "Space Gray" ;
     schema1:price 99.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.5 ;
+    schema1:ratingValue 5.0 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-mini-for-mac.html> .
 
 ex:prod020 a ex:Keyboard,
@@ -279,7 +279,7 @@ ex:prod020 a ex:Keyboard,
     schema1:color "Black" ;
     schema1:price 119.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 4.4 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-s-wireless-keyboard.html> .
 
 ex:prod022 a ex:Keyboard,
@@ -292,7 +292,7 @@ ex:prod022 a ex:Keyboard,
     schema1:color "Tonal Rose" ;
     schema1:price 33.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 4.8 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/pebble-keys-2.html> .
 
 ex:prod023 a ex:Keyboard,
@@ -305,7 +305,7 @@ ex:prod023 a ex:Keyboard,
     schema1:color "Off-white" ;
     schema1:price 60.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/wave-keys-ergonomic-wireless.html> .
 
 ex:prod024 a ex:Keyboard,
@@ -318,7 +318,7 @@ ex:prod024 a ex:Keyboard,
     schema1:color "Graphite" ;
     schema1:price 69.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.5 ;
+    schema1:ratingValue 3.9 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/wave-keys-business-ergonomic-wireless.html> .
 
 ex:prod025 a ex:Keyboard,
@@ -331,7 +331,7 @@ ex:prod025 a ex:Keyboard,
     schema1:color "Graphite" ;
     schema1:price 159.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.3 ;
+    schema1:ratingValue 4.1 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-mechanical-mini.html> .
 
 ex:prod026 a ex:Keyboard,
@@ -344,7 +344,7 @@ ex:prod026 a ex:Keyboard,
     schema1:color "Grey Black" ;
     schema1:price 29.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keyboard-sleeve.html> .
 
 ex:prod027 a ex:Keyboard,
@@ -357,7 +357,7 @@ ex:prod027 a ex:Keyboard,
     schema1:color "Off-white" ;
     schema1:price 79.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 3.9 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/signature-slim-k950-keyboard.html> .
 
 ex:prod028 a ex:Keyboard,
@@ -370,7 +370,7 @@ ex:prod028 a ex:Keyboard,
     schema1:color "Off-white" ;
     schema1:price 60.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 4.4 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/wave-keys-mac.html> .
 
 ex:prod029 a ex:Keyboard,
@@ -383,7 +383,7 @@ ex:prod029 a ex:Keyboard,
     schema1:color "Space Gray" ;
     schema1:price 119.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.3 ;
+    schema1:ratingValue 4.9 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/mx-keys-s-for-mac.html> .
 
 ex:prod030 a ex:Keyboard,
@@ -409,7 +409,7 @@ ex:prod031 a ex:Keyboard,
     schema1:color "Lilac & Off White" ;
     schema1:price 49.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.1 ;
+    schema1:ratingValue 4.4 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/pop-icon-keys.html> .
 
 ex:prod032 a ex:Keyboard,
@@ -422,7 +422,7 @@ ex:prod032 a ex:Keyboard,
     schema1:color "Graphite" ;
     schema1:price 49.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.9 ;
+    schema1:ratingValue 4.6 ;
     schema1:url <https://www.logitech.com/en-us/products/keyboards/k620-business.html> .
 
 ex:prod033 a ex:Combo,
@@ -435,7 +435,7 @@ ex:prod033 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 119.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.9 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/signature-slim-mk955.html> .
 
 ex:prod034 a ex:Combo,
@@ -448,7 +448,7 @@ ex:prod034 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 4.5 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-combo-business-gen-2.html> .
 
 ex:prod035 a ex:Combo,
@@ -461,7 +461,7 @@ ex:prod035 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.7 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-s-keyboard-mouse-combo.html> .
 
 ex:prod036 a ex:Combo,
@@ -474,7 +474,7 @@ ex:prod036 a ex:Combo,
     schema1:color "Black" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.5 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-s-combo.html> .
 
 ex:prod037 a ex:Combo,
@@ -487,7 +487,7 @@ ex:prod037 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 39.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.5 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mk370-keyboard-mouse.html> .
 
 ex:prod038 a ex:Combo,
@@ -500,7 +500,7 @@ ex:prod038 a ex:Combo,
     schema1:color "Classic Chic" ;
     schema1:price 179.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 4.2 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/casa-pop-up-desk.html> .
 
 ex:prod039 a ex:Combo,
@@ -513,7 +513,7 @@ ex:prod039 a ex:Combo,
     schema1:color "Tonal Rose" ;
     schema1:price 59.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.7 ;
+    schema1:ratingValue 4.4 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/pebble-2-keyboard-mouse-combo.html> .
 
 ex:prod040 a ex:Combo,
@@ -526,7 +526,7 @@ ex:prod040 a ex:Combo,
     schema1:color "Tonal White" ;
     schema1:price 59.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.6 ;
+    schema1:ratingValue 4.7 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/pebble-2-combo-for-mac.html> .
 
 ex:prod041 a ex:Combo,
@@ -539,7 +539,7 @@ ex:prod041 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 89.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.6 ;
+    schema1:ratingValue 4.9 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mk670-wave-keys-mouse.html> .
 
 ex:prod042 a ex:Combo,
@@ -552,7 +552,7 @@ ex:prod042 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 244.98 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.8 ;
+    schema1:ratingValue 4.7 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mx-mechanical-master-3s.html> .
 
 ex:prod043 a ex:Combo,
@@ -565,7 +565,7 @@ ex:prod043 a ex:Combo,
     schema1:color "Black" ;
     schema1:price 69.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 4.7 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/productivity-value-solution.html> .
 
 ex:prod044 a ex:Combo,
@@ -578,7 +578,7 @@ ex:prod044 a ex:Combo,
     schema1:color "Black" ;
     schema1:price 0.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.2 ;
+    schema1:ratingValue 5.0 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/productivity-style-bundle.html> .
 
 ex:prod045 a ex:Combo,
@@ -591,7 +591,7 @@ ex:prod045 a ex:Combo,
     schema1:color "Black" ;
     schema1:price 159.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.5 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/productivity-bundle.html> .
 
 ex:prod046 a ex:Combo,
@@ -604,7 +604,7 @@ ex:prod046 a ex:Combo,
     schema1:color "Black" ;
     schema1:price 349.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.5 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/ultimate-productivity-bundle.html> .
 
 ex:prod047 a ex:Combo,
@@ -617,7 +617,7 @@ ex:prod047 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 119.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 4.6 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/signature-slim-mk955-business.html> .
 
 ex:prod048 a ex:Combo,
@@ -630,7 +630,7 @@ ex:prod048 a ex:Combo,
     schema1:color "Pale Gray" ;
     schema1:price 219.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.2 ;
+    schema1:ratingValue 3.8 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mx-mechanical-mini-master-3s-mac.html> .
 
 ex:prod049 a ex:Combo,
@@ -656,7 +656,7 @@ ex:prod050 a ex:Combo,
     schema1:color "Space Gray" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 4.5 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mx-keys-s-combo-for-mac.html> .
 
 ex:prod051 a ex:Combo,
@@ -669,7 +669,7 @@ ex:prod051 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 79.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.7 ;
+    schema1:ratingValue 4.4 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/signature-slim-mk955-for-business-copilot-edition.html> .
 
 ex:prod052 a ex:Combo,
@@ -682,7 +682,7 @@ ex:prod052 a ex:Combo,
     schema1:color "Rose & Off White" ;
     schema1:price 69.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/pop-icon-combo.html> .
 
 ex:prod053 a ex:Combo,
@@ -695,7 +695,7 @@ ex:prod053 a ex:Combo,
     schema1:color "Graphite" ;
     schema1:price 69.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 3.6 ;
     schema1:url <https://www.logitech.com/en-us/products/combos/mk625-business.html> .
 
 ex:prod054 a ex:Product,
@@ -708,7 +708,7 @@ ex:prod054 a ex:Product,
     schema1:color "Oxford Grey" ;
     schema1:price 229.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.2 ;
+    schema1:ratingValue 3.9 ;
     schema1:url <https://www.logitech.com/en-us/products/ipad-keyboards/combo-touch-ipad-air.html> .
 
 ex:prod055 a ex:Product,
@@ -721,7 +721,7 @@ ex:prod055 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 259.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.5 ;
+    schema1:ratingValue 4.4 ;
     schema1:url <https://www.logitech.com/en-us/products/ipad-keyboards/combo-touch-ipad-pro.html> .
 
 ex:prod056 a ex:Product,
@@ -734,7 +734,7 @@ ex:prod056 a ex:Product,
     schema1:color "Silver" ;
     schema1:price 4.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.5 ;
+    schema1:ratingValue 3.9 ;
     schema1:url <https://www.logitech.com/en-us/products/ipad-accessories/crayon-replacement-tip-usb-c.html> .
 
 ex:prod057 a ex:Product,
@@ -747,7 +747,7 @@ ex:prod057 a ex:Product,
     schema1:color "Pale Gray" ;
     schema1:price 79.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.0 ;
+    schema1:ratingValue 4.7 ;
     schema1:url <https://www.logitech.com/en-us/products/tablet-keyboards/keys-to-go2-universal.html> .
 
 ex:prod058 a ex:Product,
@@ -760,7 +760,7 @@ ex:prod058 a ex:Product,
     schema1:color "Pale Gray" ;
     schema1:price 79.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.9 ;
+    schema1:ratingValue 3.8 ;
     schema1:url <https://www.logitech.com/en-us/products/tablet-keyboards/keys-to-go2-apple.html> .
 
 ex:prod059 a ex:Product,
@@ -773,7 +773,7 @@ ex:prod059 a ex:Product,
     schema1:color "Sunset red" ;
     schema1:price 149.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.6 ;
+    schema1:ratingValue 3.9 ;
     schema1:url <https://www.logitech.com/en-us/products/speakers/bluetooth-speakers/boom-3.html> .
 
 ex:prod060 a ex:Product,
@@ -786,7 +786,7 @@ ex:prod060 a ex:Product,
     schema1:color "Sunset red" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.0 ;
+    schema1:ratingValue 3.6 ;
     schema1:url <https://www.logitech.com/en-us/products/speakers/bluetooth-speakers/megaboom-3.html> .
 
 ex:prod061 a ex:Product,
@@ -799,7 +799,7 @@ ex:prod061 a ex:Product,
     schema1:color "Black" ;
     schema1:price 279.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.4 ;
+    schema1:ratingValue 4.5 ;
     schema1:url <https://www.logitech.com/en-us/products/speakers/bluetooth-speakers/hyperboom-renewed.html> .
 
 ex:prod062 a ex:Product,
@@ -812,7 +812,7 @@ ex:prod062 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 29.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 4.7 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/brio-100-b.html> .
 
 ex:prod063 a ex:Product,
@@ -825,7 +825,7 @@ ex:prod063 a ex:Product,
     schema1:color "Black" ;
     schema1:price 169.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 3.7 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/brio-4k-hdr-webcam.html> .
 
 ex:prod064 a ex:Product,
@@ -838,7 +838,7 @@ ex:prod064 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 169.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.9 ;
+    schema1:ratingValue 4.3 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/streamcam.html> .
 
 ex:prod065 a ex:Product,
@@ -851,7 +851,7 @@ ex:prod065 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 59.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.6 ;
+    schema1:ratingValue 4.9 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/brio-300-webcam.html> .
 
 ex:prod066 a ex:Product,
@@ -877,7 +877,7 @@ ex:prod067 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 39.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.7 ;
+    schema1:ratingValue 4.8 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/brio-105-business-webcam.html> .
 
 ex:prod069 a ex:Product,
@@ -890,7 +890,7 @@ ex:prod069 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.4 ;
+    schema1:ratingValue 4.5 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/mx-brio-705-for-business.html> .
 
 ex:prod070 a ex:Product,
@@ -903,7 +903,7 @@ ex:prod070 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 199.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.0 ;
+    schema1:ratingValue 4.2 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/mx-brio-4k-webcam.html> .
 
 ex:prod071 a ex:Product,
@@ -916,7 +916,7 @@ ex:prod071 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 349.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.4 ;
+    schema1:ratingValue 3.5 ;
     schema1:url <https://www.logitech.com/en-us/products/webcams/reach-overhead-content-camera.html> .
 
 ex:prod072 a ex:Product,
@@ -929,7 +929,7 @@ ex:prod072 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 8.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.6 ;
+    schema1:ratingValue 4.2 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/conference-cameras/meetup2-conferencecam.html> .
 
 ex:prod073 a ex:Product,
@@ -942,7 +942,7 @@ ex:prod073 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 18.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.4 ;
+    schema1:ratingValue 4.2 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rallybarhuddle.html> .
 
 ex:prod074 a ex:Product,
@@ -968,7 +968,7 @@ ex:prod076 a ex:Product,
     schema1:color "TAA Compliant" ;
     schema1:price 41.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.7 ;
+    schema1:ratingValue 4.1 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rallybar.html> .
 
 ex:prod077 a ex:Product,
@@ -981,7 +981,7 @@ ex:prod077 a ex:Product,
     schema1:color "White" ;
     schema1:price 32.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rallybarmini.html> .
 
 ex:prod078 a ex:Product,
@@ -994,7 +994,7 @@ ex:prod078 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 27.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.5 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html> .
 
 ex:prod079 a ex:Product,
@@ -1007,7 +1007,7 @@ ex:prod079 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 21.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 4.0 ;
+    schema1:ratingValue 4.9 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-streamline-kit.html> .
 
 ex:prod080 a ex:Product,
@@ -1020,7 +1020,7 @@ ex:prod080 a ex:Product,
     schema1:color "Graphite" ;
     schema1:price 69.99 ;
     schema1:priceCurrency "USD" ;
-    schema1:ratingValue 3.6 ;
+    schema1:ratingValue 4.0 ;
     schema1:url <https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-board-65.html> .
 
 ex:TabletAccessories a ex:Category ;

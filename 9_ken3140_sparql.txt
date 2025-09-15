@@ -78,7 +78,7 @@ ORDER BY DESC(?avgPrice)
 
 
 RESULTS:
-Logitech | 102.8846052631578947368421053 | 4.225 | 76
+Logitech | 102.8846052631578947368421053 | 4.263157894736842105263157895 | 76
 
 
 Query D
@@ -105,7 +105,7 @@ ORDER BY DESC(?avgBrandPrice)
 
 
 RESULTS:
-Logitech | 55.19 | 4.2 | 15
+Logitech | 55.19 | 4.166666666666666666666666667 | 15
 
 
 Query F
@@ -164,12 +164,14 @@ ORDER BY ASC(xsd:decimal(?price))
 
 
 RESULTS:
-Logi USB-A to USB-C Adaptor | 14.99 | 4.2 | Graphite
-M340 Collection | 17.99 | 4.9 | Speckles
-Pebble Mouse 2 M350s | 19.99 | 4.3 | Tonal Graphite
+M340 Collection | 17.99 | 4.3 | Speckles
+Pebble Mouse 2 M350s | 19.99 | 4.7 | Tonal Graphite
 M240 for Business | 24.99 | 4.1 | Graphite
-Signature AI Edition M750 Wireless mouse | 49.99 | 4.8 | Graphite
-MX Anywhere 3S | 79.99 | 4.4 | Rose
+Signature Wired M520 L for Business | 24.99 | 4.1 | Graphite
+ERGO M575S | 44.99 | 4.6 | Black + Silver Ball
+ERGO M575 Wireless Trackball for Business | 49.99 | 4.1 | Graphite
+Signature AI Edition M750 Wireless mouse | 49.99 | 4.5 | Graphite
+MX Anywhere 3S | 79.99 | 4.6 | Rose
 MX Anywhere 3S for Mac | 79.99 | 4.3 | Pale Grey
 
 
