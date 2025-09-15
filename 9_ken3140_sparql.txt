@@ -78,7 +78,7 @@ ORDER BY DESC(?avgPrice)
 
 
 RESULTS:
-Logitech | 1.028947368421052631578947368 | 4.264473684210526315789473684 | 76
+Logitech | 102.8846052631578947368421053 | 4.225 | 76
 
 
 Query D
@@ -105,50 +105,41 @@ ORDER BY DESC(?avgBrandPrice)
 
 
 RESULTS:
-Logitech | 0.552 | 4.246666666666666666666666667 | 15
+Logitech | 55.19 | 4.2 | 15
 
 
 Query F
 =======
 
 PREFIX ex: <http://example.org/webshop#>
-PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-# F) Recommend similar items based on shared brand and/or category
-SELECT ?candidateLabel ?sharedAttributes WHERE {
+# F) Recommend items sharing brand (always true here) and optionally same category
+SELECT ?candidateLabel
+       (IF(?candidateCategory = ?seedCategory, "SameCategory", "DifferentCategory") AS ?categoryRelation)
+WHERE {
   VALUES ?seedItem { ex:prod001 }
-  
-  ?seedItem ex:hasBrand ?seedBrand ;
-            ex:inCategory ?seedCategory .
-  
+  ?seedItem ex:hasBrand ?seedBrand ; ex:inCategory ?seedCategory .
+
   ?candidate rdfs:label ?candidateLabel ;
              ex:hasBrand ?seedBrand ;
              ex:inCategory ?candidateCategory .
-  
-  BIND(
-    CONCAT(
-      IF(?seedBrand = ?seedBrand, "SameBrand ", ""),
-      IF(?seedCategory = ?candidateCategory, "SameCategory", "DifferentCategory")
-    ) AS ?sharedAttributes
-  )
-  
   FILTER(?candidate != ?seedItem)
 }
-ORDER BY ?sharedAttributes ?candidateLabel
+ORDER BY ?categoryRelation ?candidateLabel
 LIMIT 10
 
 
 RESULTS:
-BOOM 3 | SameBrand DifferentCategory
-BRIO 100 | SameBrand DifferentCategory
-BRIO 305 | SameBrand DifferentCategory
-Brio | SameBrand DifferentCategory
-Brio 105 | SameBrand DifferentCategory
-Brio 300 | SameBrand DifferentCategory
-CRAYON (USB-C) TIP COVER | SameBrand DifferentCategory
-Casa Pop-Up Desk | SameBrand DifferentCategory
-Combo Touch for iPad Air | SameBrand DifferentCategory
-Combo Touch for iPad Pro | SameBrand DifferentCategory
+BOOM 3 | DifferentCategory
+BRIO 100 | DifferentCategory
+BRIO 305 | DifferentCategory
+Brio | DifferentCategory
+Brio 105 | DifferentCategory
+Brio 300 | DifferentCategory
+CRAYON (USB-C) TIP COVER | DifferentCategory
+Casa Pop-Up Desk | DifferentCategory
+Combo Touch for iPad Air | DifferentCategory
+Combo Touch for iPad Pro | DifferentCategory
 
 
 Query G
@@ -173,15 +164,13 @@ ORDER BY ASC(xsd:decimal(?price))
 
 
 RESULTS:
-Logi USB Type-C to USB Type-C Cable | 0.10 | 4.4 | Graphite
-M340 Collection | 0.18 | 4.8 | Speckles
-Pebble Mouse 2 M350s | 0.20 | 4.8 | Tonal Graphite
-ERGO M575 Wireless Trackball for Business | 0.50 | 4.8 | Graphite
-Signature AI Edition M750 Wireless mouse | 0.50 | 4.3 | Graphite
-MX Anywhere 3S | 0.80 | 4.4 | Rose
-MX Anywhere 3S for Mac | 0.80 | 4.9 | Pale Grey
-MX ANYWHERE 3S FOR BUSINESS | 1.00 | 4.7 | Graphite
-MX Ergo S | 1.10 | 4.1 | Graphite
+Logi USB-A to USB-C Adaptor | 14.99 | 4.2 | Graphite
+M340 Collection | 17.99 | 4.9 | Speckles
+Pebble Mouse 2 M350s | 19.99 | 4.3 | Tonal Graphite
+M240 for Business | 24.99 | 4.1 | Graphite
+Signature AI Edition M750 Wireless mouse | 49.99 | 4.8 | Graphite
+MX Anywhere 3S | 79.99 | 4.4 | Rose
+MX Anywhere 3S for Mac | 79.99 | 4.3 | Pale Grey
 
 
 Query E (for Wikidata)

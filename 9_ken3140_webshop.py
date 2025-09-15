@@ -36,7 +36,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from datetime import datetime
 
 # --------- FILE PATHS ---------
-CSV_IN  = Path("9_ken3140_webshop.csv")
+CSV_IN = Path("9_ken3140_webshop.csv")
 TTL_OUT = Path("9_ken3140_webshop.ttl")
 TXT_OUT = Path("9_ken3140_sparql.txt")
 
@@ -49,7 +49,8 @@ schema = Namespace("http://schema.org/")
 # %%
 def qname_or_uri(s: str):
     s = str(s).strip()
-    if not s: return None
+    if not s:
+        return None
     if s.startswith("schema:"):
         return schema[s.split("schema:")[1]]
     if s.startswith("ex:"):
@@ -58,13 +59,16 @@ def qname_or_uri(s: str):
         return URIRef(s)
     return URIRef(BASE + s)
 
+
 def smart_literal(val):
-    if pd.isna(val): return None
+    if pd.isna(val):
+        return None
     s = str(val).strip()
-    if s == "": return None
+    if s == "":
+        return None
     # Handle price values - convert from cents to dollars
     if re.fullmatch(r"\d+\.\d{2}", s):
-        price_val = float(s) / 100  # Convert cents to dollars
+        price_val = float(s)
         return Literal(f"{price_val:.2f}", datatype=XSD.decimal)
     if re.fullmatch(r"\d+", s):
         return Literal(s, datatype=XSD.integer)
@@ -74,17 +78,22 @@ def smart_literal(val):
         return Literal(s, datatype=XSD.date)
     return Literal(s)
 
+
 # Enhanced category inference from URL - FIXED MAPPING
 CATEGORY_RULES = [
-    (re.compile(r"/products/mice", re.I),         ("Mouse", "ComputerMice")),
-    (re.compile(r"/products/keyboards", re.I),    ("Keyboard", "Keyboards")),
-    (re.compile(r"/products/combos", re.I),       ("Combo", "KeyboardMouseCombos")),
-    (re.compile(r"/products/ipad", re.I),         ("TabletAccessory", "iPadAccessories")),
-    (re.compile(r"/products/tablet", re.I),       ("TabletAccessory", "TabletAccessories")),
-    (re.compile(r"/products/speakers", re.I),     ("Speaker", "Speakers")),
-    (re.compile(r"/products/webcams", re.I),      ("Webcam", "Webcams")),
-    (re.compile(r"/products/video-conferencing", re.I), ("VideoConferencing", "ConferenceCameras")),
+    (re.compile(r"/products/mice", re.I), ("Mouse", "ComputerMice")),
+    (re.compile(r"/products/keyboards", re.I), ("Keyboard", "Keyboards")),
+    (re.compile(r"/products/combos", re.I), ("Combo", "KeyboardMouseCombos")),
+    (re.compile(r"/products/ipad", re.I), ("TabletAccessory", "iPadAccessories")),
+    (re.compile(r"/products/tablet", re.I), ("TabletAccessory", "TabletAccessories")),
+    (re.compile(r"/products/speakers", re.I), ("Speaker", "Speakers")),
+    (re.compile(r"/products/webcams", re.I), ("Webcam", "Webcams")),
+    (
+        re.compile(r"/products/video-conferencing", re.I),
+        ("VideoConferencing", "ConferenceCameras"),
+    ),
 ]
+
 
 def infer_type_and_subcat(url: str):
     try:
@@ -92,9 +101,10 @@ def infer_type_and_subcat(url: str):
         for pat, (obj_type, subcat) in CATEGORY_RULES:
             if pat.search(path):
                 return f"ex:{obj_type}", f"ex:{subcat}"
-    except: 
+    except:
         pass
     return "ex:Product", "ex:Miscellaneous"
+
 
 def generate_rating():
     """Generate a realistic rating between 3.5 and 5.0"""
@@ -153,38 +163,38 @@ categories_created = set()
 for _, row in df.iterrows():
     item = qname_or_uri(row["Item URI"])
     g.add((item, RDF.type, ex.Product))
-    
+
     # Infer product type and category from URL
     obj_type, subcat = infer_type_and_subcat(str(row["Item URL"]))
     obj_type_uri = qname_or_uri(obj_type)
     subcat_uri = qname_or_uri(subcat)
-    
+
     # Add product type
     g.add((item, RDF.type, obj_type_uri))
-    
+
     # Create and link category - THIS WAS THE MAIN ISSUE
     g.add((subcat_uri, RDF.type, ex.Category))
     category_label = subcat.split(":")[-1] if ":" in subcat else subcat
     g.add((subcat_uri, RDFS.label, Literal(category_label)))
     g.add((item, ex.inCategory, subcat_uri))  # CRITICAL: Link item to category
-    
+
     categories_created.add(str(subcat_uri))
-    
+
     # Add basic properties
     g.add((item, RDFS.label, Literal(str(row["Item Name"]).strip())))
     g.add((item, schema.url, URIRef(str(row["Item URL"]).strip())))
     g.add((item, ex.hasBrand, ex.Logitech))
-    
+
     # Add a generated rating for each item
     rating = generate_rating()
     g.add((item, schema.ratingValue, Literal(str(rating), datatype=XSD.decimal)))
-    
+
     # Add attributes from CSV columns
     for n in range(1, 6):
         attr_col = f"Attribute {n}"
         val_col = f"Value {n}"
         schema_col = f"Schema URI {n}"
-        
+
         if all(col in row.index for col in [attr_col, val_col, schema_col]):
             pred = qname_or_uri(row[schema_col])
             val = smart_literal(row[val_col])
@@ -203,9 +213,9 @@ def runq(title, query):
     try:
         results = list(g.query(query))
         output = f"{title}\n{'='*len(title)}\n{query}\n\nRESULTS:\n"
-        if not results: 
+        if not results:
             return output + "(no results)\n\n"
-        
+
         result_lines = []
         for row in results[:20]:  # Limit to first 20 results for readability
             formatted_row = []
@@ -215,17 +225,18 @@ def runq(title, query):
                 else:
                     formatted_row.append(str(item))
             result_lines.append(" | ".join(formatted_row))
-        
+
         if len(results) > 20:
             result_lines.append(f"... and {len(results) - 20} more results")
-            
+
         return output + "\n".join(result_lines) + "\n\n"
     except Exception as e:
         return f"{title}\nERROR: {str(e)}\n\n"
 
+
 # CORRECTED QUERIES with proper URIs and logic
 queries = {
-"A": """
+    "A": """
 PREFIX ex: <http://example.org/webshop#>
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -240,8 +251,7 @@ SELECT ?itemLabel ?brandName ?categoryLabel WHERE {
   ?category rdfs:label ?categoryLabel .
 }
 """,
-
-"B": """
+    "B": """
 PREFIX ex: <http://example.org/webshop#>
 PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -261,8 +271,7 @@ SELECT ?brandName ?item1Label ?category1Label ?item2Label ?category2Label WHERE 
 ORDER BY ?brandName ?item1Label ?item2Label
 LIMIT 10
 """,
-
-"C": """
+    "C": """
 PREFIX ex: <http://example.org/webshop#>
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -280,8 +289,7 @@ SELECT ?brandName
 GROUP BY ?brandName
 ORDER BY DESC(?avgPrice)
 """,
-
-"D": """
+    "D": """
 PREFIX ex: <http://example.org/webshop#>
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -301,36 +309,25 @@ SELECT ?brandName
 GROUP BY ?brandName
 ORDER BY DESC(?avgBrandPrice)
 """,
-
-"F": """
+    "F": """
 PREFIX ex: <http://example.org/webshop#>
-PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-# F) Recommend similar items based on shared brand and/or category
-SELECT ?candidateLabel ?sharedAttributes WHERE {
+# F) Recommend items sharing brand (always true here) and optionally same category
+SELECT ?candidateLabel
+       (IF(?candidateCategory = ?seedCategory, "SameCategory", "DifferentCategory") AS ?categoryRelation)
+WHERE {
   VALUES ?seedItem { ex:prod001 }
-  
-  ?seedItem ex:hasBrand ?seedBrand ;
-            ex:inCategory ?seedCategory .
-  
+  ?seedItem ex:hasBrand ?seedBrand ; ex:inCategory ?seedCategory .
+
   ?candidate rdfs:label ?candidateLabel ;
              ex:hasBrand ?seedBrand ;
              ex:inCategory ?candidateCategory .
-  
-  BIND(
-    CONCAT(
-      IF(?seedBrand = ?seedBrand, "SameBrand ", ""),
-      IF(?seedCategory = ?candidateCategory, "SameCategory", "DifferentCategory")
-    ) AS ?sharedAttributes
-  )
-  
   FILTER(?candidate != ?seedItem)
 }
-ORDER BY ?sharedAttributes ?candidateLabel
+ORDER BY ?categoryRelation ?candidateLabel
 LIMIT 10
 """,
-
-"G": """
+    "G": """
 PREFIX ex: <http://example.org/webshop#>
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -404,14 +401,14 @@ sections.append("Query E (for Wikidata)\n====================\n" + E_query + "\n
 TXT_OUT.write_text("\n".join(sections), encoding="utf-8")
 print("Wrote results to:", TXT_OUT)
 
-print("\n" + "="*60)
+print("\n" + "=" * 60)
 print("SUMMARY:")
 print(f"- Loaded {len(df)} items from CSV")
-print(f"- Generated {len(g)} triples in RDF graph") 
+print(f"- Generated {len(g)} triples in RDF graph")
 print(f"- Categories created: {len(categories_created)}")
 print(f"- Executed {len(queries)} SPARQL queries")
 print(f"- Results written to: {TXT_OUT}")
-print("="*60)
+print("=" * 60)
 
 # %%
 # Debug: Check what's actually in the graph
@@ -432,11 +429,11 @@ for item in test_items:
     exists = (item, None, None) in g
     print(f"  {item}: {'EXISTS' if exists else 'NOT FOUND'}")
 
-print(f"\nChecking test categories:")  
+print(f"\nChecking test categories:")
 for cat in test_categories:
     exists = (cat, None, None) in g
     print(f"  {cat}: {'EXISTS' if exists else 'NOT FOUND'}")
-    
+
 print(f"\nActual categories in graph:")
 for s, p, o in g.triples((None, RDF.type, ex.Category)):
     print(f"  {s}")
