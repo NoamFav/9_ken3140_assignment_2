@@ -267,6 +267,7 @@ SELECT ?brandName ?item1Label ?category1Label ?item2Label ?category2Label WHERE 
   ?category1 rdfs:label ?category1Label .
   ?category2 rdfs:label ?category2Label .
   FILTER(?item1 != ?item2 && ?category1 != ?category2)
+  FILTER(STR(?item1) < STR(?item2))   # avoid symmetric duplicates
 }
 ORDER BY ?brandName ?item1Label ?item2Label
 LIMIT 10

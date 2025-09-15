@@ -38,6 +38,7 @@ SELECT ?brandName ?item1Label ?category1Label ?item2Label ?category2Label WHERE 
   ?category1 rdfs:label ?category1Label .
   ?category2 rdfs:label ?category2Label .
   FILTER(?item1 != ?item2 && ?category1 != ?category2)
+  FILTER(STR(?item1) < STR(?item2))   # avoid symmetric duplicates
 }
 ORDER BY ?brandName ?item1Label ?item2Label
 LIMIT 10
@@ -49,11 +50,11 @@ Logitech | BOOM 3 | Speakers | BRIO 305 | Webcams
 Logitech | BOOM 3 | Speakers | Brio | Webcams
 Logitech | BOOM 3 | Speakers | Brio 105 | Webcams
 Logitech | BOOM 3 | Speakers | Brio 300 | Webcams
-Logitech | BOOM 3 | Speakers | CRAYON (USB-C) TIP COVER | iPadAccessories
-Logitech | BOOM 3 | Speakers | Casa Pop-Up Desk | KeyboardMouseCombos
-Logitech | BOOM 3 | Speakers | Combo Touch for iPad Air | iPadAccessories
-Logitech | BOOM 3 | Speakers | Combo Touch for iPad Pro | iPadAccessories
-Logitech | BOOM 3 | Speakers | ERGO M575 Wireless Trackball for Business | ComputerMice
+Logitech | BOOM 3 | Speakers | LOGI DOCK FLEX | ConferenceCameras
+Logitech | BOOM 3 | Speakers | Logitech Rally Camera Streamline Kit | ConferenceCameras
+Logitech | BOOM 3 | Speakers | Logitech Reach | Webcams
+Logitech | BOOM 3 | Speakers | MX Brio | Webcams
+Logitech | BOOM 3 | Speakers | MX Brio 705 for Business | Webcams
 
 
 Query C
@@ -78,7 +79,7 @@ ORDER BY DESC(?avgPrice)
 
 
 RESULTS:
-Logitech | 102.8846052631578947368421053 | 4.263157894736842105263157895 | 76
+Logitech | 102.8846052631578947368421053 | 4.248684210526315789473684211 | 76
 
 
 Query D
@@ -105,7 +106,7 @@ ORDER BY DESC(?avgBrandPrice)
 
 
 RESULTS:
-Logitech | 55.19 | 4.166666666666666666666666667 | 15
+Logitech | 55.19 | 4.153333333333333333333333333 | 15
 
 
 Query F
@@ -164,15 +165,14 @@ ORDER BY ASC(xsd:decimal(?price))
 
 
 RESULTS:
-M340 Collection | 17.99 | 4.3 | Speckles
-Pebble Mouse 2 M350s | 19.99 | 4.7 | Tonal Graphite
-M240 for Business | 24.99 | 4.1 | Graphite
-Signature Wired M520 L for Business | 24.99 | 4.1 | Graphite
-ERGO M575S | 44.99 | 4.6 | Black + Silver Ball
-ERGO M575 Wireless Trackball for Business | 49.99 | 4.1 | Graphite
-Signature AI Edition M750 Wireless mouse | 49.99 | 4.5 | Graphite
-MX Anywhere 3S | 79.99 | 4.6 | Rose
-MX Anywhere 3S for Mac | 79.99 | 4.3 | Pale Grey
+Logi USB Type-C to USB Type-C Cable | 9.99 | 4.3 | Graphite
+M340 Collection | 17.99 | 4.1 | Speckles
+M240 for Business | 24.99 | 4.8 | Graphite
+Signature Wired M520 L for Business | 24.99 | 4.3 | Graphite
+ERGO M575S | 44.99 | 4.1 | Black + Silver Ball
+Signature AI Edition M750 Wireless mouse | 49.99 | 4.7 | Graphite
+MX Anywhere 3S for Mac | 79.99 | 4.5 | Pale Grey
+MX Anywhere 3S | 89.99 | 4.6 | Black
 
 
 Query E (for Wikidata)
