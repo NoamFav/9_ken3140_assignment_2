@@ -78,7 +78,7 @@ ORDER BY DESC(?avgPrice)
 
 
 RESULTS:
-Logitech | 10288.46052631578947368421053 | 4.210526315789473684210526316 | 76
+Logitech | 1.028947368421052631578947368 | 4.264473684210526315789473684 | 76
 
 
 Query D
@@ -105,7 +105,7 @@ ORDER BY DESC(?avgBrandPrice)
 
 
 RESULTS:
-Logitech | 5519.0 | 4.066666666666666666666666667 | 15
+Logitech | 0.552 | 4.246666666666666666666666667 | 15
 
 
 Query F
@@ -173,7 +173,15 @@ ORDER BY ASC(xsd:decimal(?price))
 
 
 RESULTS:
-(no results)
+Logi USB Type-C to USB Type-C Cable | 0.10 | 4.4 | Graphite
+M340 Collection | 0.18 | 4.8 | Speckles
+Pebble Mouse 2 M350s | 0.20 | 4.8 | Tonal Graphite
+ERGO M575 Wireless Trackball for Business | 0.50 | 4.8 | Graphite
+Signature AI Edition M750 Wireless mouse | 0.50 | 4.3 | Graphite
+MX Anywhere 3S | 0.80 | 4.4 | Rose
+MX Anywhere 3S for Mac | 0.80 | 4.9 | Pale Grey
+MX ANYWHERE 3S FOR BUSINESS | 1.00 | 4.7 | Graphite
+MX Ergo S | 1.10 | 4.1 | Graphite
 
 
 Query E (for Wikidata)
